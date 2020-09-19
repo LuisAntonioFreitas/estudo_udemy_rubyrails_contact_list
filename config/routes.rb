@@ -5,5 +5,11 @@ Rails.application.routes.draw do
 
   get 'sobre', to: 'static_pages#sobre'
   get 'contato', to: 'static_pages#contato'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
+  resources :contacts
+  resources :users, only: [:new, :create, :show]
 
 end

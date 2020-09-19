@@ -18,6 +18,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$gray: #808080;
+$gray-light: #D3D3D3;
+$gray-darker: #A9A9A9;
 $gray-medium-light: #EAEAEA;
 
 footer {
@@ -26,6 +29,7 @@ footer {
     border-top: 1px solid $gray-medium-light;
     color: $gray-light;
     a {
+      text-decoration: none !important;
       color: $gray;
       /*It means: that a:hover */
       &:hover{
