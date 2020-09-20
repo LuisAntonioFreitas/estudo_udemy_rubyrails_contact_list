@@ -9,8 +9,7 @@
 // It is generally better to create a new file per JavaScript code.
 //
 
-//= require jquery
-//= require bootstrap-sprockets
-
+//= require jquery_ujs
+//= require turbolinks
 //= require_tree .
 //= require_self

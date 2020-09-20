@@ -15,13 +15,18 @@
  */
 
 /* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 $gray: #808080;
 $gray-light: #D3D3D3;
 $gray-darker: #A9A9A9;
 $gray-medium-light: #EAEAEA;
+
+header {
+  margin-bottom: 45px;
+  border-bottom: 1px solid $gray-medium-light;
+  color: $gray-light;
+}
 
 footer {
     margin-top: 45px;
