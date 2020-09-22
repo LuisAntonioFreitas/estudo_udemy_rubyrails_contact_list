@@ -1,0 +1,60 @@
+/* 
+# Colocar o código abaixo no arquivo: "config/environment.rb"
+
+# Impede que mensagens de erro atrapalhem o CSS nos formulários
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+    html_tag.html_safe
+end 
+*/
+
+.label-placeholder-move.original {
+    margin:20px 0;
+    width:100%;
+    position:relative;
+    display:inline-block;
+}
+.label-placeholder-move.normal {
+    margin:5px 0 !important; /* 20px 0; */
+    width:100%;
+    position:relative;
+    display:inline-block;
+}
+.label-placeholder-move.original
+    span {
+        padding:10px;
+        pointer-events: none;
+        position:absolute;
+        left:-2px;
+        top:0;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        opacity:0.5;
+    }
+.label-placeholder-move.normal
+    span {
+        padding:7px 5px 3px !important; /* 10px; */
+        pointer-events: none;
+        position:absolute;
+        left:5px;
+        top:0;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        opacity:0.5;
+    }
+.label-placeholder-move 
+    input {
+        padding:10px;
+    }
+.label-placeholder-move 
+    input:focus + span, input:not(:placeholder-shown) + span {
+        opacity:1;
+        transform: scale(0.75) translateY(-90%) translateX(-18px);
+    }
+.label-placeholder-move 
+    /* For IE Browsers*/
+    input:focus + span, input:not(:-ms-input-placeholder) + span {
+        opacity:1;
+        transform: scale(0.75) translateY(-90%) translateX(-18px);
+    }

@@ -1,11 +1,20 @@
 <%= render 'layouts/error_messages', object: f.object %>
 
 <div class="form-group">
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %>
+  <label class="label-placeholder-move normal">
+    <%= f.text_field :name, class: 'form-control', placeholder: '' %>
+    <span><%= f.label :name %></span>
+  </label>
 </div>
 
 <div class="form-group">
-  <%= f.label :phone %>
-  <%= f.text_field :phone, class: 'form-control' %>
+  <label class="label-placeholder-move normal">
+    <%= f.text_field :phone, class: 'form-control', placeholder: '' %>
+    <span><%= f.label :phone %></span>
+  </label>
 </div>
+
+<label class="label-placeholder-move original">
+  <input placeholder="">
+  <span>Placeholder Text</span>
+</label>
